@@ -14,3 +14,9 @@ insert into Employee (id, name, salary, managerId) values ('4', 'Max', '90000', 
 
 SELECT b.name as Employee FROM Employee as a JOIN Employee as b ON a.id = b.managerId WHERE a.salary < b.salary;
 
+-- Another solution
+ 
+SELECT e2.name as Employee
+FROM employee e1
+INNER JOIN employee e2 ON e1.id = e2.managerID WHERE e1.salary < e2.salary;
+
